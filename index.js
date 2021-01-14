@@ -7,8 +7,8 @@ const runner = new Runner();
 
 // node may or may not be able to run top level await commands so we have to wrap it inside a function depending on the version of node we are running
 const run = async () => {
-	const results = await runner.collectFiles(process.cwd());
-	console.log(results);
+	await runner.collectFiles(process.cwd());
+	console.log(runner.testFiles);
 };
 
 run();
